@@ -14,14 +14,8 @@ const CurrencyConverter = () => {
   const [toAmount, setToAmount] = useState(1000 * exchRate);
 
   useEffect(() => {
-    setToAmount(fromAmount * exchRate);
-    console.log('eff1');
-  }, [exchRate, fromAmount]);
-
-  useEffect(() => {
-    setFromAmount(toAmount / exchRate);
-    console.log('eff2');
-  }, [toAmount]); /* eslint-disable-line*/
+    setToAmount(Math.round(fromAmount * exchRate * 100) / 100);
+  }, [exchRate]); /* eslint-disable-line*/
 
   useEffect(() => {
     if (fromCurrency === toCurrency) {
@@ -69,51 +63,51 @@ const CurrencyConverter = () => {
         setExchRate(1 / obj.sale);
       }
     });
-
-    console.log('eff3');
   }, [fromCurrency, toCurrency]); /* eslint-disable-line*/
 
   function getCrossRate() {
     const toUAH = exchangeRates.find(obj => fromCurrency === obj.ccy).buy;
     const uahToCur = exchangeRates.find(obj => toCurrency === obj.ccy).sale;
-    const res = toUAH / uahToCur;
-    return res;
+    return toUAH / uahToCur;
   }
   function getCrossRateUahBtc() {
     const toUSD = exchangeRates.find(obj => obj.ccy === 'USD').sale;
     const toBTC = exchangeRates.find(obj => obj.ccy === 'BTC').sale;
-    const res = 1 / toUSD / toBTC;
-    return res;
+    return 1 / toUSD / toBTC;
   }
   function getCrossRateEurOrRuRtoBtc() {
     const toUAH = exchangeRates.find(obj => fromCurrency === obj.ccy).buy;
     const toUSD = exchangeRates.find(obj => obj.ccy === 'USD').sale;
     const toBTC = exchangeRates.find(obj => obj.ccy === 'BTC').sale;
-    const res = toUAH / toUSD / toBTC;
-    return res;
+    return toUAH / toUSD / toBTC;
   }
   function getCrossRateBtcUah() {
     const toUSD = exchangeRates.find(obj => obj.ccy === 'BTC').buy;
     const toUAH = exchangeRates.find(obj => obj.ccy === 'USD').buy;
-    const res = 1 * toUSD * toUAH;
-    return res;
+    return 1 * toUSD * toUAH;
   }
 
   function getCrossRateBtcToEurOrRuR() {
     const toUAH = getCrossRateBtcUah();
     const toCur = exchangeRates.find(obj => toCurrency === obj.ccy).sale;
-    const res = toUAH / toCur;
-    return res;
+    return toUAH / toCur;
   }
 
-  function onClick() {
+  function onClickReverse() {
     const temp = fromCurrency;
     setFromCurrency(toCurrency);
     setToCurrency(temp);
   }
 
-  console.log(Math.floor(1.005 * 100) / 100);
-  console.log((1.005).toFixed(2));
+  function handleChangeFromAmount(e) {
+    setFromAmount(Math.round(e.target.value * 100) / 100);
+    setToAmount(Math.round(e.target.value * exchRate * 100) / 100);
+  }
+
+  function handleChangeToAmount(e) {
+    setToAmount(Math.round(e.target.value * 100) / 100);
+    setFromAmount(Math.round((e.target.value / exchRate) * 100) / 100);
+  }
 
   return (
     <div className="container">
@@ -122,9 +116,9 @@ const CurrencyConverter = () => {
           selectedCurrency={fromCurrency}
           onChangeCurrency={e => setFromCurrency(e.target.value)}
           amount={fromAmount}
-          onChangeAmount={e => setFromAmount(e.target.value)}
+          onChangeAmount={handleChangeFromAmount}
         />
-        <button className={s.btn} type="button" onClick={onClick}>
+        <button className={s.btn} type="button" onClick={onClickReverse}>
           <svg className={s.icon}>
             <use href={sprite + '#icontransfer'} />
           </svg>
@@ -133,7 +127,7 @@ const CurrencyConverter = () => {
           selectedCurrency={toCurrency}
           onChangeCurrency={e => setToCurrency(e.target.value)}
           amount={toAmount}
-          onChangeAmount={e => setToAmount(e.target.value)}
+          onChangeAmount={handleChangeToAmount}
         />
       </div>
     </div>

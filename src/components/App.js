@@ -26,7 +26,6 @@ export default function App() {
   return (
     <>
       <Header />
-      {/* {isLoading && <LoaderSpinner />} */}
       {requestCounter === 5 && (
         <div className="container">
           <h4 className="message">
@@ -35,12 +34,6 @@ export default function App() {
           </h4>
         </div>
       )}
-      {/* {exchangeRates.length === 0 && (
-        <h3 className="message">
-          Currency rates are currently unknown. Try to use the service a little
-          later
-        </h3>
-      )} */}
       {exchangeRates.length > 0 && requestCounter < 5 && (
         <>
           <ExchangeTable /> <CurrencyConverter />

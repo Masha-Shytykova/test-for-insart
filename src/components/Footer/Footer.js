@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={s.footer}>
       <div className="container">
         <p className={s.text}>
-          <span className={s.symbol}>&copy;</span> 2021 All Rights Reserved
+          <span className={s.symbol}>&copy;</span> 2021 All rights reserved
         </p>
       </div>
     </footer>

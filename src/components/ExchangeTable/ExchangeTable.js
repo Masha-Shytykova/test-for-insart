@@ -30,8 +30,8 @@ const ExchangeTable = () => {
                   <td className={s.tdText}>
                     {ccy} / {base_ccy}
                   </td>
-                  <td className={s.tdText}>{buy}</td>
-                  <td className={s.tdText}>{sale}</td>
+                  <td className={s.tdText}>{Math.round(buy * 100) / 100}</td>
+                  <td className={s.tdText}>{Math.round(sale * 100) / 100}</td>
                 </tr>
               ))}
             </tbody>

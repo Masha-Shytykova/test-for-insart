@@ -1,18 +1,18 @@
 .table {
-  padding-top: 25px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: 0 auto;
   width: 300px;
   text-align: center;
 }
 
 .thText {
-  padding: 10px;
+  padding: 5px;
   font-size: 14px;
 }
 
 .tdText {
-  padding: 10px;
+  padding: 5px;
   font-size: 14px;
 }
 
@@ -21,11 +21,11 @@
     width: 450px;
   }
   .thText {
-    padding: 15px;
+    padding: 8px;
     font-size: 16px;
   }
   .tdText {
-    padding: 15px;
+    padding: 8px;
     font-size: 16px;
   }
 }
@@ -35,11 +35,11 @@
     width: 550px;
   }
   .thText {
-    padding: 20px;
+    padding: 10px;
     font-size: 18px;
   }
   .tdText {
-    padding: 20px;
+    padding: 10px;
     font-size: 18px;
   }
 }
