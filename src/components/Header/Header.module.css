@@ -1,0 +1,65 @@
+.header {
+  height: 100px;
+  background-color: #525252;
+  color: #fff;
+  fill: #fff;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.logo {
+  border-left: 1px solid #ff6b08;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.text {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.icon {
+  fill: #fff;
+  width: 25px;
+  height: 25px;
+}
+
+.icon:hover,
+.icon:focus {
+  fill: #ff6b08;
+}
+.date {
+  display: inline-block;
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .date {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+  .text {
+    font-size: 18px;
+  }
+  .date {
+    font-size: 18px;
+  }
+}

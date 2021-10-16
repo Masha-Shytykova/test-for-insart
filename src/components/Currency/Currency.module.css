@@ -1,0 +1,70 @@
+.input {
+  margin-right: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  width: 130px;
+  border: none;
+  border-bottom: 2px solid rgba(24, 28, 39, 0.2);
+  outline: none;
+  color: #181c27;
+  padding: 7px 0 7px 8px;
+  background: transparent;
+  transition: border-color linear 250ms;
+}
+
+.select {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 3px;
+  width: 50px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #a6a6a6;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+}
+.select::-ms-expand {
+  display: none;
+}
+.select:hover {
+  border-color: #ff6b08;
+}
+.select:focus {
+  border-color: #ff6b08;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  outline: none;
+}
+.select option {
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    width: 150px;
+    font-size: 16px;
+  }
+
+  .select {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .input {
+    width: 175px;
+    font-size: 18px;
+  }
+
+  .select {
+    font-size: 18px;
+  }
+}

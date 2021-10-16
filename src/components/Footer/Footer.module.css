@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #525252;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.symbol {
+  color: #ff6b08;
+}
