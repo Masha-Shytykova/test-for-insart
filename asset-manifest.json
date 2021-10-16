@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/test-for-insart/static/css/main.cf66315a.chunk.css",
+    "main.js": "/test-for-insart/static/js/main.a67f99b6.chunk.js",
+    "main.js.map": "/test-for-insart/static/js/main.a67f99b6.chunk.js.map",
+    "runtime-main.js": "/test-for-insart/static/js/runtime-main.732c063a.js",
+    "runtime-main.js.map": "/test-for-insart/static/js/runtime-main.732c063a.js.map",
+    "static/js/2.dc885429.chunk.js": "/test-for-insart/static/js/2.dc885429.chunk.js",
+    "static/js/2.dc885429.chunk.js.map": "/test-for-insart/static/js/2.dc885429.chunk.js.map",
+    "index.html": "/test-for-insart/index.html",
+    "static/css/main.cf66315a.chunk.css.map": "/test-for-insart/static/css/main.cf66315a.chunk.css.map",
+    "static/js/2.dc885429.chunk.js.LICENSE.txt": "/test-for-insart/static/js/2.dc885429.chunk.js.LICENSE.txt",
+    "static/media/sprite.61e7aa6e.svg": "/test-for-insart/static/media/sprite.61e7aa6e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.732c063a.js",
+    "static/js/2.dc885429.chunk.js",
+    "static/css/main.cf66315a.chunk.css",
+    "static/js/main.a67f99b6.chunk.js"
+  ]
+}
