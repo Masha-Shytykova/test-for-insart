@@ -73,6 +73,10 @@ body {
   margin-top: 20px;
 }
 
+.body {
+  min-height: 320px;
+}
+
 @media screen and (min-width: 320px) {
   .container {
     width: 320px;

@@ -28,16 +28,18 @@ export default function App() {
       <Header />
       {requestCounter === 5 && (
         <div className="container">
-          <h4 className="message">
-            You have exceeded the allowed number of requests, try using the
-            service a little later
-          </h4>
+          <div className="body">
+            <h4 className="message">
+              You have exceeded the allowed number of requests, try using the
+              service a little later
+            </h4>
+          </div>
         </div>
       )}
       {exchangeRates.length > 0 && requestCounter < 5 && (
-        <>
+        <div className="body">
           <ExchangeTable /> <CurrencyConverter />
-        </>
+        </div>
       )}
       <Footer />
     </>

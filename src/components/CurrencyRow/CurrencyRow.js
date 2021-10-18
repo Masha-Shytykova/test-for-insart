@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { getExchangeRates } from '../../redux/exchangeRates/exchangeRatesSelectors';
 
-import s from './Currency.module.css';
+import s from './CurrencyRow.module.css';
 
-const Currency = ({
+const CurrencyRow = ({
   selectedCurrency,
   onChangeCurrency,
   amount,
@@ -41,4 +41,4 @@ const Currency = ({
   );
 };
 
-export default Currency;
+export default CurrencyRow;
